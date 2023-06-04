@@ -13,7 +13,7 @@ D6 - Door-2
 D7 - Gate  
 My bad, i not complete citcuit for call tetection. In voltage divider such as R10+R9 and R6+R5 between line must be calculated and connected to any free digital pin or A0 with setup different level of deetection.  
 you need to know what level (power or Audio line levels used and using) used and setup this for output not greater than 3.3v pin voltage of ESP8266digital pins.  
-Reference image below:
-![InterAssist](https://github.com/dotntech/InterAssist/blob/main/Screenshot_6.png)
+Reference image below:  
+![InterAssist](https://github.com/dotntech/InterAssist/blob/main/Screenshot_6.png)  
 Assembled:  
 ![InterAssist_Assembled](https://github.com/dotntech/InterAssist/blob/7cf597e411476bddfe169925f33fdcf8942a7b5c/assembled_view.jpg)
