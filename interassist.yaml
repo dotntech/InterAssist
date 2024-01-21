@@ -1,0 +1,55 @@
+esphome:
+  name: "interassist"
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  networks:
+  - ssid: "yourhomewifi"
+    password: "useyourpasswd"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "interassist"
+    password: "useyourown"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: "1234"
+
+ota:
+  password: "1234"
+
+
+switch:
+  - platform: gpio
+    pin: 14
+    id: relay1
+    name: "Door One"
+    icon: "mdi:door"
+    on_turn_on:
+    - delay: 1000ms
+    - switch.turn_off: relay1
+    
+  - platform: gpio
+    pin: 12
+    id: relay2
+    name: "Door Two"
+    icon: "mdi:door"
+    on_turn_on:
+      - delay: 1000ms
+      - switch.turn_off: relay2
+      
+ - platform: gpio
+    pin: 13
+    id: relay3
+    name: "Gates"
+    icon: "mdi:gate"
+    on_turn_on:
+      - delay: 1000ms
+      - switch.turn_off: relay3
